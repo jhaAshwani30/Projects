@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diwali Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #fef6e4;
+      margin: 0;
+    }
+    .quiz-container {
+      width: 100%;
+      max-width: 500px;
+      padding: 20px;
+      background-color: #fff;
+      border: 2px solid #ffa500;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    h1 {
+      text-align: center;
+      color: #ff8c00;
+    }
+    .question {
+      margin: 20px 0;
+      font-size: 18px;
+    }
+    .options {
+      list-style-type: none;
+      padding: 0;
+    }
+    .options li {
+      margin: 10px 0;
+    }
+    .options input {
+      margin-right: 10px;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #ffa500;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #ff8c00;
+    }
+    .result {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 20px;
+      color: #ff8c00;
+    }
+  </style>
+</head>
+<body>
+
+<div class="quiz-container">
+  <h1>Diwali Quiz</h1>
+
+  <!-- Question 1 -->
+  <div class="question">
+    <p>1. Diwali is celebrated to mark the return of which deity to Ayodhya?</p>
+    <ul class="options">
+      <li><input type="radio" name="q1" value="0"> Lord Shiva</li>
+      <li><input type="radio" name="q1" value="1"> Lord Rama</li>
+      <li><input type="radio" name="q1" value="0"> Lord Krishna</li>
+      <li><input type="radio" name="q1" value="0"> Lord Vishnu</li>
+    </ul>
+  </div>
+
+  <!-- Question 2 -->
+  <div class="question">
+    <p>2. What is the main festival activity during Diwali?</p>
+    <ul class="options">
+      <li><input type="radio" name="q2" value="1"> Lighting Diyas</li>
+      <li><input type="radio" name="q2" value="0"> Playing Games</li>
+      <li><input type="radio" name="q2" value="0"> Planting Trees</li>
+      <li><input type="radio" name="q2" value="0"> Building Houses</li>
+    </ul>
+  </div>
+
+  <!-- Question 3 -->
+  <div class="question">
+    <p>3. Which goddess is worshipped during Diwali?</p>
+    <ul class="options">
+      <li><input type="radio" name="q3" value="0"> Saraswati</li>
+      <li><input type="radio" name="q3" value="1"> Lakshmi</li>
+      <li><input type="radio" name="q3" value="0"> Durga</li>
+      <li><input type="radio" name="q3" value="0"> Parvati</li>
+    </ul>
+  </div>
+
+  <!-- Question 4 -->
+  <div class="question">
+    <p>4. Which color is typically associated with Diwali?</p>
+    <ul class="options">
+      <li><input type="radio" name="q4" value="0"> Blue</li>
+      <li><input type="radio" name="q4" value="1"> Orange</li>
+      <li><input type="radio" name="q4" value="0"> Green</li>
+      <li><input type="radio" name="q4" value="0"> Purple</li>
+    </ul>
+  </div>
+
+  <!-- Question 5 -->
+  <div class="question">
+    <p>5. Diwali is also known as the festival of:</p>
+    <ul class="options">
+      <li><input type="radio" name="q5" value="1"> Lights</li>
+      <li><input type="radio" name="q5" value="0"> Colors</li>
+      <li><input type="radio" name="q5" value="0"> Water</li>
+      <li><input type="radio" name="q5" value="0"> Air</li>
+    </ul>
+  </div>
+
+  <!-- Submit Button -->
+  <button class="btn" onclick="calculateScore()">Submit Quiz</button>
+
+  <!-- Result -->
+  <div class="result" id="result"></div>
+</div>
+
+<script>
+  function calculateScore() {
+    let score = 0;
+
+    // Check each question's answer
+    const answers = ["q1", "q2", "q3", "q4", "q5"];
+    answers.forEach((answer, index) => {
+      const selectedOption = document.querySelector(`input[name="${answer}"]:checked`);
+      if (selectedOption && selectedOption.value === "1") {
+        score++;
+      }
+    });
+
+    // Display result
+    const result = document.getElementById("result");
+    result.innerHTML = `You scored ${score} out of 5! ${score >= 3 ? "Great job!" : "Keep learning about Diwali!"}`;
+  }
+</script>
+
+</body>
+</html>

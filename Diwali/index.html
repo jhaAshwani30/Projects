@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diwali Wishes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Salsa&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+    <section class="hero-section">
+
+        <img class="ring" src="/diwaliimage/design-5 1.png" alt="design">
+        <div class="paragraph-audio">
+            <p>Hi, <span id="receiver"></span>
+                <br>
+             
+                So... this Diwali,
+                I made something for you!
+            </p>
+
+            <div class="audio-container">
+                <img src="/diwaliimage/micon/Iconsax/Bold/music.svg" alt="icon">
+                <span class="soulful-music">&nbsp; Baja ke Dekho &nbsp;</span>
+                <img class="rythem" src="/diwaliimage/micon/rythem.svg" alt="rythem">
+                <audio src="/music/VIDEO- Jethalal Happy Diwali Song.mp3" controls autoplay></audio>
+            </div>
+        </div>
+        <img class="deepak first-deepak" src="/diwaliimage/deepak 1.png" alt="deepak">
+        <img class="deepak second-deepak" src="/diwaliimage/deepak 1.png" alt="deepak">
+    </section>
+    <section class="lakshmi-ganesha-section">
+        <div class="horizontal">
+            <div class="horizontal-line"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="horizontal-line"></div>
+            <!-- <img src="/diwaliimage/Group 8.png" alt="horizontal-line"> -->
+        </div>
+        <img class="lakshmi-ganesha-img" src="/diwaliimage/lakshmi maa and ganesh ji 1.png" alt="lakshmi-ganesha">
+        <h2>Wishing You a Blessed and Prosperous Deepawali</h2>
+        <div class="horizontal">
+            <div class="horizontal-line"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="horizontal-line"></div>
+        </div>
+
+        <div class="white-card-container">
+
+            <div class="white-card">
+                <p>People say, “Diwali is the festival of lights.”</p>
+                <p>You know what? It’s so much more than that. Diwali is the celebration of hope, the triumph of good over evil, and the light that shines from within us. It's a time to come together, share joy, spread kindness, and fill our homes and hearts with warmth.
+                    It reminds us that no matter how dark the path may seem, there is always light waiting to guide us forward. This Diwali, may each diya you light bring a spark of joy, peace, and prosperity into your life."</p>
+                    <a href="origin.html" class="link">Read about the Origin of Diwali</a>
+                    <a href="quiz.html" class="quiz-link">Take the Diwali Quiz</a>
+
+
+                </div>
+            <img class="little-girl" src="/diwaliimage/little-girl 1.png" alt="little-girl">
+           
+        </div>
+        <div class="horizontal">
+            <div class="horizontal-line"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="horizontal-line"></div>
+        </div>
+        <div class="lakshmi-ganesha-card">
+            <img src="/diwaliimage/Group 15.png" alt="lakshmi-ganesha-card">
+        </div>
+        <div class="thank-you-text">
+            <h4>Happy Diwali and,</h4>
+            <h2>Thank You For Everything...</h2>
+        </div>
+        <p class="my-name">Made with 💜 By Ashwani Jha</p>
+    </section>
+    <script>
+        const receiverName = document.querySelector("#receiver");
+        const senderName = document.querySelector("#sender");
+        receiverName.innerText = new URLSearchParams(location.search).get(
+            "receiver"
+        );
+        senderName.innerText = new URLSearchParams(location.search).get("sender") || 'Ashwani';
+    </script>
+    
+
+</body>
+
+</html>
